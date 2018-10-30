@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      background-color: #333;
+    }
+    #player{
+      background-color: #545454;
+    }
+    #button{
+      background-color: #7c7c7c;
+    }
+    button{
+      font-size: 40px;
+      padding :20px;
+      border: 5px solid black;
+    }
+    #button1{
+      border-radius: 100px 20px 20px 100px;
+    }
+    #button2{
+      border-radius: 10px;
+    }
+    #button3{
+      border-radius: 20px 100px 100px 20px;
+    }
+    button:active{
+      border-color: blue;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="player">
+    <iframe id="iframe" width="720" height="560" src="https://www.youtube.com/embed/mQf1DhSbHfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <div id="button">
+      <button id="button1">prev</button>
+      <button id="button2">play</button>
+      <button id="button3">next</button>
+    </div>
+  </div>
+</body>
+</html>
