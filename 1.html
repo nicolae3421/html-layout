@@ -1,218 +1,62 @@
 <!DOCTYPE html>
-
-<html>
-
-  <head>
+<html lang="en">
+<head>
     <style>
-        #x1{
-    opacity:0.5;
-}
-#x1:hover{
-    opacity:0.9;
-}
-#a1{
-    opacity:0.7;
-}
-#a1:hover{
-    opacity:1
-}
-#x2{
-    opacity:0.5;
-}
-#x2:hover{
-    opacity:0.9
-}
+        body{
+            background-image: url(image1.jpg);
+        }
+        .input{
+            margin-left:35%;
+            margin-right: 40%;
+            margin-top: 15%;
+            text-align: center;
+        }
+        .password{
+            margin-top: 0;
+        }
+        .submit{
+            margin: 0;
+            margin-left: 290px;
+        }
+        .email{
+            margin-left:o;
+        }
+        .submit{
+            margin-left: 0;
+            margin-top: 2px;
+            border: 4px solid black;
+            border-radius: 50px;
+            background-color: yellow;
+        }
+        #signup{
+            border-radius: 50px;
+        }
+        #button_signup{
+            background-color: rgb(58, 58, 255);
+            border-radius: 50px;
+            border: 3px solid black;
+        }
+        #button_signup:active{
+            border-color: #8f8f8f;
+            background-color: rgb(133, 133, 0);
+        }
+        .submit:active{
+            border-color: #8f8f8f;
+            background-color: rgb(58, 58, 255);
+        }
     </style>
-
-    <meta charset="utf-8">
-
-    <title>contact list</title>
-
-  </head>
-
-  <body>
-
-    <table border="1">
-
-      <tr background="https://vecer.mk/files/article/2018/05/21/589027-im-dojde-krajot-na-danochnite-zatajuvanja-milijardite-se-vrakjaat.jpg" >
-
-        <td align="center" >
-
-          <h2>&#127822;Steve Jobs</h2>
-
-          <hr>
-
-          <img src="data:image/png;base64,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">
-
-        </td>
-
-        <td>
-
-          <form>
-
-
-            <p><label for="domen"><b>Domeniu</b> </label>
-
-            <select name="optiom" id="domen">
-
-              <option>Geniu</option>
-
-              <option selected>Manager</option>
-
-              <option>Maturator</option>
-
-              <option>Secretar</option>
-
-            </select>
-
-            </p>
-
-            <p><label><b>Experiență de lucru </b><input type="text" name="Experienta" size="2" maxlength="2" ></label></p>
-
-            <p>
-
-              <label for="select"><b>Data nasterii</b></label>
-
-              <select id="select">
-
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>
-
-              </select>
-
-              <select id="select">
-
-                <option>Ianuarie</option><option>Februarie</option><option>Martie</option><option>Aprilie</option><option>Mai</option><option>Iunie</option><option>Iulie</option><option>August</option><option>Septembrie</option><option>Octombrie</option><option>Noiembrie</option><option>Decembrie</option>
-
-              </select>
-
-              <select id="select">
-
-                <option>1982+</option><option>1983</option><option>1984</option><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option><option>2000</option><option>2001+</option>
-
-              </select>
-
-              <p><label><b>M</b> <input type="radio" name="name" value="Yes" checked></label><label><b>F</b> <input type="radio" name="name" value="No"></label></p>
-
-            </p>
-
-            <p><label for="x1"><b>De ce anume eu...</b></label></p>
-
-              <p><textarea id="x1" name="text" rows="5" cols="35" placeholder="Text..."></textarea>
-
-            </p>
-
-
-          </form>
-
-          <hr>
-
-          <ul>
-
-            <li><small><b>telefon:<b><img src="http://icons.iconarchive.com/icons/martz90/circle/16/phone-icon.png"><a href="tel:068232587">068232587</a></small></li>
-
-            <li><small><b>E-mail: </b><img src="http://icons.iconarchive.com/icons/aroche/delta/16/Mail-icon.png"> <a href="E-mail:">SteveJobs@gmail.com</a></small></li>
-
-            <li><small><b>Skype: </b><img src="http://icons.iconarchive.com/icons/hopstarter/orb/16/Skype-icon.png"> <a href="Skype:">SteveJobs</a></small></li>
-
-          </ul>
-
-          <p align="center"><button type="button" name="button" >Expediere</button></p>
-
-        </td>
-
-      </tr>
-
-      <tr background="http://worldtemplates.net/uploads/posts/2012-08/1345218338_5lz3y5xtlsoh6u7g.png" width="100%" height="100%">
-
-        <td align="center">
-
-          <h2>    &#128471;Bill Gates</h2>
-
-          <hr>
-
-          <img id="a1" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEhUTExIVFhUWFxUZGBYXFxYZHhgYFyAXGh8aGhkYHiggGholGxcYITEiJSorLi4uFx8zODMtNygtLisBCgoKDg0NDw8PFS0ZFRkrKzcrKystNzctKysrKystKystKzctLSsrLS0rLS0rKysrKysrKy0rKysrKysrKysrK//AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcDBAUCAQj/xABGEAACAQIDBQUFBQYEAgsAAAABAgADEQQSIQUxQVFhBhMicYEHMlKRoUJigrHBFCNyktHwc6Ky4TNTFRYkQ1STs8LS4vH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/ALxiIgIiICIniqd3LjA9xNfMeZ4f3afAxtvNzaBsxMDMd9zuJ9RPJY8zuPz+UDZiYnJuv1n2lexuenygZImuWP6fnPqtrvPD5QM8TACeZtcj5TyGbrw/u0DZia6lrA3NtJ8LHr/teBsxMDE66neAPW0+06nPl9dYGaJhza7zwsOk8ZjwJ4X6GBsxMSMb68t0ywEREBERAREQEREBERAREQPFWqFUsxCqoJJJsABqSSdwAn1HBFwQQeI1nN7QbWw2HpMcTUVUYFcp1LgixCqNW05T87V3VKjfs7VBTzHJm8LZeGbKbX8oFwdufaEuEbucOEqVh75a5Wn0IBGZulxbjykNxHtNx6IxLUsxGi937vVtb+Q9fOIAd3v1flvC9Tzbpw466DTxCM/hXUsQLk2FzzJ4/WBZ2yvapXqoA6UkdiQLBhe1rlczG+/8+U1D7TaiYkvkWsRTKWDFES5UmwAOY+HU3/2rO6vVUD3AQo/gX9TqT1YzPhQdWbe2sCyKntXxTXC06CcswdvS4YW8yD+s42L9q20Vci9EW4d1/VryP3BS7KPetcWB1F9w0NrcuInKxLXPi1H2XHw8LjiPqNfKBcnYH2pftVQYfGLTpVG0p1FuqO3wEMTkbdY3IY3GhsDZ0/I4ogmxdbHo36iTLYPtLx2DtTYitTXTJWuWA6VBrbzzC1rQP0NEgXZv2pYXE2FZWw7n4yGS/wDiC1vNgBJ4rX1GogfYiICIiAiIgIiICIiAiIgIiIHl3AFyQANSTyHGVV2w9rIDGhs4Co241yLqP8Nft/xHw7rBhPftt7QMq08DSYg1B3tax17tTZV01szAn8FtxMqykpUWu1+NyflaBt4h6tVzUr1Gd2956hJY9AN4XkALDpPWHYA3Fwo95zv/AIV+Endz362vMFOnpmbRfqbch+u4fSab7RLWVafGyrcnU6bhqWPP/wDIGxXq2u7cSSB8R5Dprv4TSFYkNUO+2RRwGbfboFuPNlM+7RqklUvmKCxI4uTc2twGii3w9ZJNidmC5BqDw01LEcObM3ysBxCjrA4mydmVGKvkOW+nXr5TbTAVD9hh6bpKE4TBjsSKaFrXPAczwECLbTcqpQgj3bA7wDm39TrOdQ8QKE2HiYH4SBc+hAsfQ8Ndp6DPdnbxM1zboP8A7fQTJhcMoYaXvpr10/WBzu5a9rG/9633W6zoYSgSMr2+7cA26En7J6bjrffMqtYW4cv73T4YHuw3e7w42H6j6yfezrtg2FqLha73oMbI2p7ondY/8s/TfprK8xOJF14EjU8CdQQeR0vfr6zYpuQOqEEeV9R87fMwP0/Eq/YPbetTVKbKKoOVadzlbxWCqDrm3gDS/WWRgHqMgaqgRzqUBzZeQvxNt8DYiIgIiICIiAiIgIiICcntFQxbIGwdVEqLe6VFurg8CRqpHAjTU35jrStvaX2+7hjgsMR3zKe9q/8AJQi5yjjUyeLXdpvvAqztFtSrWqvWrODVbTMLD3PCMuXgLaEefG80sAwCjNv+yvMcz0/OeEAqgaWAv4RwVfsj8IsPSalMM7EjfvJ3BR15AbvkIHUJLniSdAP0AH5TDgsGxJSlZqm5ql/DTB4K3FjxYdQOJm/spO+q06FM+KrYFyLXGuaw4KACbbzx5C2aeyaVIfucPS3k2sF153sdYohHZnsfua1z/wAxhoP4F/vzkg2tXSkn7PR1JIzneSeWm8n6bp1nwWLr+EFKa8ctyfnp+k2cN2bagM1KmlSp8Tta3kAP75yKiO1qa4TDF6gBrVCBTXittSflv8wOMg/jrOAAXdjYAaknkBLCxvYLG4uualerSQbhYliFHAKAAPnxnbwPZ5MGhXB0RWrsLGvVOi337gSB0Ua21PGEVz2i2GMJToBmvVfOzqNwHhtb6i/Egz52b7OVcSytbLSBF3PG3BB9o9dw+ksTAdgQ9Q18ZU76oeBFlHIBeQ5E26TY7VYgoBhsKt67jfwppuzsdygcOZ3A2MKqTaOEAxNSlRDOBUZUA1JsbWFt/wDtNHblB8O5ovYOApaxvlzANa442Mufs12RTCUy++pl1cjU9APsrf1PGRLY2xkxW08Ziaqhko1QiKdQaigLcjjlCg+bA8IpFZVAQqgjeM3836WA+c6VLEDKLk3ZGBNr2yC97E6nwj5zq4/A1do7TrohtZ2Us25KdI93fyuNw3luGpEcV1D2BugZhc6XU6Xtw8NtJUYq9Mg6m9xcHeCOl/X5GX77Ie1D4zCtTrNmrYcqpYm5em18jNzbwspPHJfjKGpC96Z338PR91vI2t55Twlhew3EFMbUQ6CrRNurIQQLfwlz6Si9IiJAiIgIiICIiAiIgeKr5VJ5An5T8oVsU9U1a1Q3qVWux+85Lt+VvIz9ZGflXa+V69Zaa2pitWyW4LmsoP4QP94GHZbeI30Xif08yL6f7mbO0MMSxRLABiLfERpmJ5/l0mE0yMlPdeooHUgC566uAOgnd7P7NfHVH7vRbks53LmPLiSL2EDf9mey2fFNXIISipRSRvZhl0/Dcn+IS3tm0AxJOtraed/6TkbLwCUKS0qY8K/MniT1MkWzKVkv8Wvpw/vrIrbAiJ9gfIiIAzWw2ARCWAuzG5Y6kndMuIrrTUs7BVHEm04r9scGDbvgfIN/SB2sUt0YdDIfsXZ3cd9ex7yvVq3HJ7Eeotb0kjwW3sNV9yuhPIm352mpi6ORiOG8eRgxX/ZLCmniNqj7YfTyfvnX53HyErjZmx61em1SlTLJTtnYW8Ol9286a6S86OzFXEPiFJDVERHHA5CcreYBI8rcpxOz+wFwVXEURY0MSWqUxa2RrWemeFrEFeitfdcqKsXDAe8LsOf9Oc6uzNqHD1qeKX3qTBmHMbj/ADKSD1PWYsXQNN2pvrlJW++2U206dJz9pApax47xu/sjnKj9TYTErVRaiG6OqspHFWAIPyMyyv8A2LbZNfAmkx8WHcpb7jeJT5e8v4JYEBERAREQEREBERASmu1HZ9KGyaWlqlLFV1Yne2d6oPncKhH3QJcsp7247Uda2Ho/92Eaqw+NySg9QFPo56QIGgBanf7Nm+Xi/ID5SyfZ7gBRwSW31C7k87nKP8qrKtwmLDMbmxy1Dr/C19ZZHZXtLhaeEpLWxNGm6hgVaooNgzWOUm9iLSauJfNbGduKFOr3SBqoVSCUF7sLAKvPiS27TS99IltDb64pqgo1c2GTIpNIrerUfMxBdgQKaqACALktvFpnepRFSlg8OjPjKiB6gFWt3dGm1jc0xUFMuQRqRYb9bqjjXax+0MfjKZSnhTh0Nv3j1GRhYg6e6RfyM8YHZm1KK50xNOsBqaZqNUzdAWG/yIkEqbJw/eMHoYc1FCkiqMS7uLlTlcOtK4Op8CgX93hOhj9jCgyrS7rD1nNqJdFolibWFDF4ZEF7kDu6tMs1tQRrCLT7P7YXF0RUUZSDldDvRhvH6g9Z0pT/AGY7T16GKqq1Khnq00qVO8xApU1qXYMQVR9S4qeG27juklxHbHEgEqdmmwJsuIxNQ6cAFw4H1hWv2lqjF4tqNSuKVKjZbWLO78Vp011dtCbAHQbjNd9m4NCadPBYvE1ABcF0pkX+MZ1NLifGF3ThdjMNidp4vEVqlY4YBUFenR8Luxar+7WqRmpIcilsp1BToRMDsBmTuqlLu8MN2Ew5QK197VqrMrVuZWyg63zyojOKbDK+UUcCjg2yHazBweRHdEA+s3KG2sTQbu2oeEaim9bM2XmjZAjC/XiL2MwUuzuIp1DTFIGkQuuWloEJN0ObwEg2KnQ2HAXO7jtkZQ4ANOhoaa3BahU3XpqPCKRBF6ea2+1r2kV39m7Rp16QqofCcw8WhUqSrKw4EEEHynnaNmp94lmNMiotrG5W9wOrIWX8Ur7s7sjDtTd6+HpVqhrYjxnPbSo66KToPD/WdzC9nsODnomrh6h/8KCo/Ehuj+ohXC7b4FkxL1MpNKpkbMBpcgDfwNwT1vIfj2ykcRa3Rl3j8z5WHKWZhRXqUzhMUg/4RFOsBbOqkJ411yVFOU77G9xuMr3EbKrupIpMQhN93qBfU2I4X3mXGUx9huNCY6tRzaVaNxfi1MggeeV3+Rl5z83ezPs+mOxndvUq0wlNqgaiwVgVKAWYg2946jXdP0bh6ORVUFiFAF2YsTbiWOpPUwMkREBERAREQEREBKy9uOwTVw9PFILnDlg/+E9rt+FgvkCx4SzZ4rUgylWAKsCCCLgg6EEcRaB+S8L71uYZR5spA+pEnXsrSg4rrUpUmdSjKzohbKwIIBIvYFRp97rPfaX2dLhsRUtWK0D4qRtcqCfdYn4ToOJFuMxdh9mgPWLHXMUBUkeJMrZkI3ArU3dCNRGjvbXwWbE1FoqpL0KbKlwgLUWqK2vAWrUxcDlM3YbZdB8NTrG/f1wKr1UqOrXexCXQgimoAAQ6abp6xeyDU97E17WIIXulJVrXXOtMOAbDcRe06myMBRp00o2RKVMWVSC1hv3m5vfWRWPH7GoZs9Wq/M5nVQbcyoBPzmqcUma9Gkzk2DVddR1qP4nPIXMlGG2bhPs0w38NM/mF/WbbYBW9yll+8x3eQuSfpAhnZrYPco7VQrV6ozVDYEKxGiL0UaX4kk6XsJrte37LVIAF6ZOgtvF5yagspA3m/qTO5tGlmw9RRxpOB/KYFebKpmniTVptkaomRze2YgrkJvpp4hc8xwGkmq4rFro1EN+BvqVJH0kbwaqzKHbKpIDHl1k0oYLE0hlSsjqNwqK2nqpvA4z4nGObJhgOWbP9bhRPK9lsRXIbE1gFBuKaaC/W2/5mSMDFcThx5CofppNmhScavUv0VQo+tz9YFe4fZJwxFNrIQWILC4JYlibgWNySZ0No49sPTzvVQ/CAvvHkNfrJBtZB3lj9pb67tNCPy+chnarZQYMyi2RM4A5AgMPlr6SK3aONzYalUYi5XU7hn3H/ADXkM7SdoamHbItLUgEVGN11vuA1vod5HrNnZFSo6NRuO6s17jcSNMp53APLSeMHh+8QJVW6OGUX47mHlaz2MqNX2TYbFVMa9TC1KSMqXqd4hZWR2F1CrYg3W4sRu9J+ghKp9hOzsn7bU3/vEog/4Wcn/wBRZa8qEREBERAREQEREBERAiXtFoBqKE82X0YX/wDaJBdkYRhhq5C5WpuKqXIJIUHfbmubTqJN/aXVK0E6lvnaw/OcfYfdqrKWGZ2tYnfYAWF+gOgkVk2NbEZCu5tT05jzGsl+HwNNPdQeZFz8zIJ2BfuqtWix9xza/S6n81PrLEgJ4qVAouTYCa21dp0sNTNWs4VR6kk7lVRqzE6ADUzn4cV61Nq5QK9r0KDmwW1iDVIv42IF7XyjQcSQ1bXZVG9mA8t5J+QMktpSvaTsztDD16m02bKWbxpScsKa6AAggELoNQbg66TpH2n1DhTTNL9+VK97mAGotny297jbdf5QVhx218PRrPSasoKuyDeQbEgG403WvyN5YXZza6tQAdwDTygkn7J0VieXC/SVB2f9m1XG2qlBTpm1qlTNcjhkQG5HXQdTLe7N9mKeERgXaqzqqMzgWyLeyBBoF1PMniYHenycCjXbB1Fo1CThqhC0ahNzSc7qFQn7JOiMePgOuW/U2lWZQMptcm5gaW3z7p4rdvTj/lzTRqUg2/kwPk1r/lMrtfU6+cxYf3QOWn8un6SKgWyh3bVaR3ox+nhP5D5zLh0vSFuBzJfkDcA9CNPIz5tZRTxtUn3bFj5FQT9bza2QrN3aupU3Rdba7hKiwewexjhMHTpsLVHLVanR6pzEab8oIX8MkMRKhERAREQEREBERAREQOL2v2eK+FcEapaoPNDf6i49ZV21zZL2JIItY2seB9JdTC4sdxlRbaweR2pH7NQDzCm9/VRJq4dm8WXqVajaMHo5rfeDUyfnZvSTRcUwHvED8pBOzC3r4iluzo1vMHT/AFXkuRhUpi+neAKeheyn5EyGORsPBti6q43EEsWP/ZqZ3UabaB7HfVZdSTuBsLSwQJyq2zSo8Gthoug3cBwnNTtFiHutLB1XYaXcd2B55iL/ADEok5F9DqDwnA/6lYDvBU/ZUzA3sC4X/wAsNkPlaaNXZO0K5vUxKUhwWmW08wuW/wDMZtL2ZqFclTH4hhxykL/qzG3S8Iklp8kWXsPSFiuIxCnmGp/ok+1MNisNYU8ZTq8qdcHMfIqWZj0AEKkeLwyVUanUUMjgqyncQZz8HTfI2HqMXenbJUO+pT1ysfvixVuZF9AwE84DaWIZgtXCMpP2ldCvmbnTy1M6dVBfMd6htehtf00B9BA4M8INT6H6W/QzNWGvmAf5gD+s1FrfvSnJFb5lh+kion2hK/ttm+3TC+ZIOnyBnU7NbPerVRfgILN0U7/M23c5jwGHXEbZCMAy06bkg7vcC/nV+YlmYPBpSXLTQKOnHzPEyozxESoREQEREBERAREQEREBIr2n7OPVqCrSsSQMwJtqNLj009JKogU8MK2F2mEcjxZRcbj3i8L/AHtPSSJ3yCoB9hlqgc1zBz/mV/pMntM2MxCYykPFRtn/AIAcwb8JJv0PSY1xKulPEJqtvEPuN7wPVSL+h5yKl9GsrgMpuDrOP2j2Iaw7ykxSso0IJXMPhJH0P9jQwlE0/Cp8H2ddV6A8V5cp1sBizfKxuDuJ4GBAv+nsXSYq1VwVNirgEg9bi87GycXtDEi6MAvxsAB6aEn0Ekm3dg08Uvi8LgeGoN46H4h0/KdKhSCKqqLBQAAOAEI5GH2HUP8Ax8VUfolqY+a+I/MTp4TBU6Q/doFvvI3nzJ1PrM818dXyLcbzoIVmqPYXsT0Gp+U5O0MS9ZTSpU6ihtHqupQIh97LmsWa1wLC2u+a7bTKuqFzmcMVHPLlv6+IfWeqldm3sTBH3FVAzEjduHkNJHNk4sPWxVYn92uVAeFqYYk+Wt/WZe1G1O4okA/vHuq9Obeg+pEgp2iwo9yPClyzW3uep5Cw06SCTezLFd7tWvUO9qFQjpd6WnoNJbkh/YbsYmD/AH7MXr1F1O4IrWJVR6C5PLhJhNIREQEREBERAREQEREBERAREQPLoCCCAQRYg8QeEqatVOzMXUw7XNBjmTiQrbiOdrFTzy387bkC9rOzs1KlXA1Rsjfwvuv5MAPxGBmwdsoKMGpkXW3DoDy6cPoNfZuP7ypXTjTqWA+7YD/UHlf7M2tVw5vTbQ71Oqn059RYzINsutc10AVm3rvBva4PQkX6SLVv4baIsA178995sjFp8QlfYTtjSI/eKyHp4h89/wBJ6xHbGgPdV39AB9Tf6QJ6+NQfav5TmYvE5zyA3CQwdthxoH+cf/Ga+L7aMRanSCnmxzfQAQMvbbGFKtDI1np5m04Zstv9J0mJe2r5bGiubnmNv5bfrIzXrM7FmJZibknjMcFbOPxr1nL1Dcn5AcgOAn3ZmG72tSp/HURf5iBMdDDs4Yj7Iuf757/lO77PcJ3mOpaaJmc/hFh/mKwi6oiJQiIgIiICIiAiIgIiICIiAiIgJHfaCgOz69+AQ+odLf09ZIpo7b2YuKoPRckBwNRvBBBB62IBtAoCJ0Nt7IqYWqaVUa7ww3OvxL0/Kc+QIifQIHyJ3MNsdbeMknkDYD+s+1djIfdYj6iFjhRM+LwrUzZuO4jcZl2ZhO8bX3Rqf6QjepU+7wzE72F/5tB9D9ZNvZbskoj12GrWUeW8/p9eU4FPZ5xDpSUe8wv5DXXppc9BLVwOFWlTWmu5Rbz5nzJ19YxWeIiVCIiAiIgIiICIiAiIgIiICIiAiIgc3b2xaWLpmnVHVWHvIean+wZTvaTs3WwT2cZkJ8NQDwt0Pwt0PpeXpMWJw61FKOoZWFirC4I6gwPzvNrZaXqp53+QJ/STrtH7OCLvhDcb+5c/6HP5N85EMDhHpV8lRGRgD4WBB89d46yDtxESNNLaOFNTKo0ANyf0Amxh6IRQqjT8+pmWSrsnsHMRXqjw70U8T8R6cue/zo6XZLY3cp3jj9443fCvLzO8+kkMRKyREQEREBERAREQEREBERAREQEREBERAREQEwYvBpVGWoisOo3eR3g+UzxAieP7GA60Xt919R6MNfnecap2XxINu7B6hl/UgyxYki1E9idk8pD17EjdTGo/EePlu85LIiVCIiAiIgIiICIiAiIgf//Z" >
-
-        </td>
-
-        <td>
-
-          <form>
-
-
-            <p><label for="domen"><b>Domeniu</b> </label>
-
-            <select name="optiom" id="domen">
-
-              <option>Geniu</option>
-
-              <option selected>Manager</option>
-
-              <option>Maturator</option>
-
-              <option>Secretar</option>
-
-            </select>
-
-            </p>
-
-            <p><label><b>Experiență de lucru </b><input type="text" name="Experienta" size="2" maxlength="2" ></label></p>
-
-            <p>
-
-              <label for="select"><b>Data nasterii</b></label>
-
-              <select id="select">
-
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option>
-
-              </select>
-
-              <select id="select">
-
-                <option>Ianuarie</option><option>Februarie</option><option>Martie</option><option>Aprilie</option><option>Mai</option><option>Iunie</option><option>Iulie</option><option>August</option><option>Septembrie</option><option>Octombrie</option><option>Noiembrie</option><option>Decembrie</option>
-
-              </select>
-
-              <select id="select">
-
-                <option>1982+</option><option>1983</option><option>1984</option><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option><option>2000</option><option>2001+</option>
-
-              </select>
-
-              <p><label><b>M</b> <input type="radio" name="name" value="Yes" checked></label><label><b>F</b> <input type="radio" name="name" value="No"></label></p>
-
-            </p>
-
-            <p><label for="x2"><b>De ce anume eu...</b></label></p>
-
-              <p><textarea id="x2" name="text" rows="5" cols="35" placeholder="Text..."></textarea>
-
-            </p>
-
-
-          </form>
-
-          <hr>
-
-          <ul>
-
-            <li><small><b>telefon:<b><img src="http://icons.iconarchive.com/icons/martz90/circle/16/phone-icon.png"><a href="tel:068232587">079521486</a></small></li>
-
-            <li><small><b>E-mail: </b><img src="http://icons.iconarchive.com/icons/aroche/delta/16/Mail-icon.png"> <a href="E-mail:">BillGates@gmail.com</a></small></li>
-
-            <li><small><b>Skype: </b><img src="http://icons.iconarchive.com/icons/hopstarter/orb/16/Skype-icon.png"> <a href="Skype:">BillGates</a></small></li>
-
-          </ul>
-
-          <p align="center"><button type="button" name="button" >Expediere</button></p>
-
-        </td>
-
-      </tr>
-
-    </table>
-
-
-  </body>
-
+    <meta charset="UTF-8">
+    <title>Sing In</title>
+</head>
+<body>
+    <div class="input">
+    <input class="email" type="E-mail" placeholder="E-mail">
+    <br>
+    <input class="password" type="password" placeholder="Password">
+    <br>
+    <input class="submit" type="submit">   
+    <br>
+    <a href="1.2.html" id="signup"><button id="button_signup">Sign up</button></a> 
+    </div>
+</body>
 </html>
