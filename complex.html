@@ -28,14 +28,33 @@
 
         body>div>div:first-child>div:first-child{
             background-color: black;
+            border-radius: 50px 0 0 0;
+            text-align: center;
         }
         body>div>div:last-child>div:last-child{
             background-color: black;
+            border-radius: 0 0 50px 0;
         }
         body>div>div:first-child>div:last-child{
             background-color: black;
         }
-
+        body>div>div:last-child>div:first-child{
+            background-color: black;
+        }
+        body>div>div:nth-child(2)>div:nth-child(3){
+            background-color: black;
+        }
+        body>div>div:nth-child(2)>div:nth-child(2){
+            background-color: black;
+            border-radius: 0 50px 0 0; 
+        }
+        body>div>div:nth-child(3)>div:nth-child(2){
+            background-color: black;
+        }
+        body>div>div:nth-child(3)>div:nth-child(3){
+            background-color: black;
+            border-radius: 0 0 0 50px;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Complex</title>
